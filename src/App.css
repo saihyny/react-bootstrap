@@ -1,0 +1,21 @@
+.sidebar {
+    width: 500px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #e49797;
+    padding: 20px;
+  }
+
+  .sidebar-content {
+    height: 100%;
+    overflow-y: auto; /* Enable vertical scrolling for overflowed content */
+  }
+  .Buttoncss {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    background-color: aqua;
+  }
