@@ -1,0 +1,12 @@
+.small-image {
+    max-width: 100px; /* Adjust the maximum width as needed */
+  }
+  
+  .item-details {
+    margin-top: 10px; /* Add spacing between the image and item details */
+  }
+  .horizontal-line {
+    border-top: 1px solid #ccc; /* Adjust the line color and thickness as needed */
+    margin-top: 20px; /* Adjust the margin to control spacing */
+  }
+  

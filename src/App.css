@@ -2,12 +2,13 @@
     width: 500px;
     position: fixed;
     right: 0;
-    top: 0;
+    top: 56px;
     bottom: 0;
     z-index: 1;
     background-color: #e49797;
     padding: 20px;
   }
+  
 
   .sidebar-content {
     height: 100%;
@@ -15,7 +16,11 @@
   }
   .Buttoncss {
     position: absolute;
-    bottom: 0;
-    right: 10px;
-    background-color: aqua;
+    top: 0;
+    left: 0;
+    color: aliceblue;
+    background-color: rgb(215, 150, 44);
+    border-width: 10px;
+    border-color: #b73737;
+    border-radius: 5px;
   }

@@ -1,10 +1,14 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import CartContext from "./Contexts/CartContext";
+
 const Products = (props) => {
+  const CrtContext = useContext(CartContext)
   const productsArr = [
     {
+      id:1,
       title: "Colors",
-
+      quantity:1,
       price: 100,
 
       imageUrl:
@@ -12,8 +16,9 @@ const Products = (props) => {
     },
 
     {
+      id:2,
       title: "Black and white Colors",
-
+      quantity:2,
       price: 50,
 
       imageUrl:
@@ -21,8 +26,9 @@ const Products = (props) => {
     },
 
     {
+      id:3,
       title: "Yellow and Black Colors",
-
+      quantity:3,
       price: 70,
 
       imageUrl:
@@ -30,14 +36,18 @@ const Products = (props) => {
     },
 
     {
+      id:4,
       title: "Blue Color",
-
+      quantity:4,
       price: 100,
 
       imageUrl:
         "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
     },
   ];
+ const Addfunction = (items)=>{
+    CrtContext.addItems(items)
+ }
   return (
     <Container style={{ marginTop: 20 }}>
       <Row xs={1} >
@@ -47,7 +57,8 @@ const Products = (props) => {
           <h2>{item.title}</h2>
           <Image src={item.imageUrl} alt="Image 1" fluid thumbnail />
           <h3>${item.price}</h3>
-          <Button>Add</Button>
+          <h3>{item.quantity}</h3>
+          <Button onClick={()=>{Addfunction(item)}}>Add</Button>
         </div>
           </Col>
         ))}
