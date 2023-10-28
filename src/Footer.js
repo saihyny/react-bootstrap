@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 const Footer = (props) => {
   return (
-    <Container style={{ backgroundColor: "black", marginTop: 3, textAlign: "center" }} fluid>
+    <Container style={{ backgroundColor: "black", marginTop: 3, textAlign: "center",marginBottom:"0" }} fluid>
       <Row>
         <h1 style={{ fontSize: '65px', fontStyle: 'oblique', color: 'aqua' }}>Roadside</h1>
       </Row>
