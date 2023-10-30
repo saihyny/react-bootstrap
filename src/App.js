@@ -5,10 +5,14 @@ import "./App.css";
 import "./navbar.css";
 import HomePage from "./HomePage";
 import CartContextProvider from "./Contexts/CartContextProvider";
+import Store from "./Store";
 const Router = createBrowserRouter([
   { path: "/About", element: <AboutPage></AboutPage> },
   {
     path: "/", element:<HomePage></HomePage>
+  },
+  {
+    path: "/Store", element:<Store/>
   }
 ]);
 function App() {
