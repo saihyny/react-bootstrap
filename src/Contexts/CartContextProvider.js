@@ -1,7 +1,17 @@
-import React,{useReducer} from "react";
+import React,{useReducer,useState} from "react";
 import CartContext from "./CartContext";
 const CartContextProvider = (props)=>{
-
+    // const theToken = localStorage.getItem('token')
+   const [isLogged,setIsLogin]= useState(false)
+   const ChechUserFn=(token)=>{
+    
+      if(token){
+        localStorage.setItem('token',true)
+        setIsLogin(true)
+      }
+   }
+  
+  
     const defaultState = {
         items:[],
         total:0,
@@ -67,8 +77,11 @@ const CartContextProvider = (props)=>{
         Quantity:state.Quantity,
         addItems:AddItems,
         removeItem:RemoveItem,
+        isLoggedin:isLogged,
+        User:ChechUserFn
     }
-    console.log(state.Quantity)
+    console.log(CartContext.isLoggedin)
+    
     return (
       <CartContext.Provider value={CrtContext}>
         {props.children}
