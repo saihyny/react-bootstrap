@@ -9,6 +9,7 @@ const AuthForm = () => {
   const CrtContext = useContext(CartContext)
   const email = useRef();
   const password = useRef();
+  
  
   if(loggedin){
     CrtContext.User(true)
@@ -25,6 +26,7 @@ const AuthForm = () => {
     e.preventDefault();
     const Email = email.current.value;
     const Password = password.current.value;
+    CrtContext.email=password.current.value;
     let URL;
     if (isLogin) {
       URL =

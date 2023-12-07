@@ -2,6 +2,7 @@ import React,{useReducer,useState} from "react";
 import CartContext from "./CartContext";
 const CartContextProvider = (props)=>{
     // const theToken = localStorage.getItem('token')
+    
    const [isLogged,setIsLogin]= useState(false)
    const ChechUserFn=(token)=>{
     
@@ -71,6 +72,7 @@ const CartContextProvider = (props)=>{
        DispatchFn({type:'remove',id:id})
     }
     const [state,DispatchFn]=useReducer(ReducerFu,defaultState)
+    
     const CrtContext = {
         items:state.items,
         total:state.total,
@@ -78,7 +80,8 @@ const CartContextProvider = (props)=>{
         addItems:AddItems,
         removeItem:RemoveItem,
         isLoggedin:isLogged,
-        User:ChechUserFn
+        User:ChechUserFn,
+        email:null,
     }
     console.log(CartContext.isLoggedin)
     

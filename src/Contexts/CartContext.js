@@ -6,7 +6,8 @@ const CartContext=createContext({
     addItems:(item)=>{},
     removeItem:(id)=>{},
     isLoggedin:false,
-    User:(token)=>{}
+    User:(token)=>{},
+    email:null,
 
 });
 export default CartContext;

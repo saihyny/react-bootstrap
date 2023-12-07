@@ -46,8 +46,21 @@ const Products = (props) => {
     },
   ];
  const Addfunction = (items)=>{
-    CrtContext.addItems(items)
+   const user = CrtContext.email;
+    fetch(`https://crudcrud.com/api/c446ac2f986443e19f26c292b95547d5/${user}`,{
+      method: "POST",
+      body: JSON.stringify({
+        items:items,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+  CrtContext.addItems(items)
+     
+    
  }
+ 
   return (
     <Container style={{ marginTop: 20 }}>
       <Row xs={1} >
