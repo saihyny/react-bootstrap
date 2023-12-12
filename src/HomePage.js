@@ -28,7 +28,6 @@ const HomePage = (props) => {
           <Navbar.Brand href="/">Home</Navbar.Brand>
           <Navbar.Brand href="/Store">Store</Navbar.Brand>
           <Navbar.Brand href="/About">About</Navbar.Brand>
-          <Navbar.Brand href="/Login">Login</Navbar.Brand>
           <CartButton onChange={setOpenClose} tru={openn}></CartButton>
         </Container>
       </Navbar>
