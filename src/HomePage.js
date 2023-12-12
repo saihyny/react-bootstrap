@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Navbar, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import Headder from "./Counter";
 import Products from "./Products";
@@ -25,9 +26,10 @@ const HomePage = (props) => {
 
       <Navbar className="fixed-top" bg="dark" expand="sm" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Home</Navbar.Brand>
-          <Navbar.Brand href="/Store">Store</Navbar.Brand>
-          <Navbar.Brand href="/About">About</Navbar.Brand>
+          <Link to="/">Home</Link>
+          <Link to="/Store">Store</Link>
+          <Link to="/About">About</Link>
+          <Link to="/Login">Login</Link>
           <CartButton onChange={setOpenClose} tru={openn}></CartButton>
         </Container>
       </Navbar>
